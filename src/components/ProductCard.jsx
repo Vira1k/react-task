@@ -9,27 +9,24 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <article className="product-card">
 
-      {/* =========================================
-          PRODUCT IMAGE
-      ========================================= */}
+      {/* =========================
+          IMAGE
+      ========================= */}
 
       <div className="product-image">
 
-        {/* DISCOUNT */}
         <span className="discount-badge">
           -{Math.round(product.discountPercentage)}%
         </span>
 
-        {/* WISHLIST */}
         <button
-          className="wishlist-button"
           type="button"
-          aria-label={`Add ${product.title} to wishlist`}
+          className="wishlist-button"
+          aria-label="Add to wishlist"
         >
           ♡
         </button>
 
-        {/* IMAGE */}
         <Link to={`/product/${product.id}`}>
           <img
             src={product.thumbnail}
@@ -40,9 +37,9 @@ function ProductCard({ product, onAddToCart }) {
       </div>
 
 
-      {/* =========================================
+      {/* =========================
           PRODUCT INFORMATION
-      ========================================= */}
+      ========================= */}
 
       <div className="product-info">
 
@@ -53,7 +50,7 @@ function ProductCard({ product, onAddToCart }) {
         </p>
 
 
-        {/* PRODUCT TITLE */}
+        {/* TITLE */}
 
         <Link
           to={`/product/${product.id}`}
@@ -84,7 +81,7 @@ function ProductCard({ product, onAddToCart }) {
         </div>
 
 
-        {/* BOUGHT / STOCK */}
+        {/* BOUGHT */}
 
         <p className="product-bought">
 
@@ -117,12 +114,10 @@ function ProductCard({ product, onAddToCart }) {
         {/* DELIVERY */}
 
         <p className="product-delivery">
-
           <strong>
             FREE delivery
           </strong>{" "}
           tomorrow
-
         </p>
 
 
@@ -144,8 +139,8 @@ function ProductCard({ product, onAddToCart }) {
         {/* ADD TO CART */}
 
         <button
-          className="add-cart-btn"
           type="button"
+          className="add-cart-btn"
           onClick={() => onAddToCart(product)}
           disabled={product.stock <= 0}
         >

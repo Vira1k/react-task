@@ -20,7 +20,7 @@ export async function getProducts() {
   // Create 300+ products from API data
   const expandedProducts = [];
 
-  for (let i = 0; i < 900; i++) {
+  for (let i = 0; i < 400; i++) {
     const original = products[i % products.length];
 
     expandedProducts.push({
