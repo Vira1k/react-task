@@ -35,7 +35,7 @@ a {
 
 
 /* =========================================================
-   NAVBAR - FIXED / RESPONSIVE
+   NAVBAR
 ========================================================= */
 
 .navbar {
@@ -49,7 +49,6 @@ a {
   padding: 0 4%;
 
   background: #ffffff;
-
   border-bottom: 1px solid #e1ebe7;
 
   position: sticky;
@@ -72,7 +71,6 @@ a {
   color: #10233d;
 
   flex-shrink: 0;
-
   text-decoration: none;
 }
 
@@ -145,7 +143,6 @@ a {
   margin-left: auto;
 
   width: min(380px, 28vw);
-
   min-width: 230px;
 
   height: 32px;
@@ -240,7 +237,9 @@ a {
 }
 
 
-/* CART COUNT */
+/* =========================================================
+   CART COUNT
+========================================================= */
 
 .cart-count {
   position: absolute;
@@ -258,7 +257,6 @@ a {
   justify-content: center;
 
   background: #08b26d;
-
   color: #ffffff;
 
   border-radius: 50%;
@@ -269,11 +267,10 @@ a {
 
 
 /* =========================================================
-   1400px
+   NAVBAR - 1400px
 ========================================================= */
 
 @media (max-width: 1400px) {
-
   .navbar {
     padding: 0 3%;
   }
@@ -308,11 +305,10 @@ a {
 
 
 /* =========================================================
-   1100px
+   NAVBAR - 1100px
 ========================================================= */
 
 @media (max-width: 1100px) {
-
   .navbar {
     padding: 0 22px;
   }
@@ -324,7 +320,6 @@ a {
   .logo-icon {
     width: 48px;
     height: 48px;
-
     border-radius: 12px;
   }
 
@@ -344,7 +339,6 @@ a {
   .navbar-search {
     width: 240px;
     min-width: 190px;
-
     height: 48px;
   }
 
@@ -359,14 +353,12 @@ a {
 
 
 /* =========================================================
-   900px
+   NAVBAR - 900px
 ========================================================= */
 
 @media (max-width: 900px) {
-
   .navbar {
     height: 78px;
-
     padding: 0 18px;
   }
 
@@ -385,7 +377,6 @@ a {
 
   .navbar-search {
     margin-left: auto;
-
     width: 300px;
     min-width: 0;
   }
@@ -397,21 +388,18 @@ a {
 
 
 /* =========================================================
-   650px
+   NAVBAR - 650px
 ========================================================= */
 
 @media (max-width: 650px) {
-
   .navbar {
     height: 72px;
-
     padding: 0 14px;
   }
 
   .logo-icon {
     width: 42px;
     height: 42px;
-
     border-radius: 10px;
   }
 
@@ -431,18 +419,16 @@ a {
   .cart-button {
     width: 36px;
     height: 36px;
-
     font-size: 20px;
   }
 }
 
 
 /* =========================================================
-   450px
+   NAVBAR - 450px
 ========================================================= */
 
 @media (max-width: 450px) {
-
   .navbar {
     padding: 0 10px;
   }
@@ -468,10 +454,11 @@ a {
   .cart-button {
     width: 34px;
     height: 34px;
-
     font-size: 18px;
   }
 }
+
+
 /* =========================================================
    HOME
 ========================================================= */
@@ -491,11 +478,11 @@ a {
   position: relative;
 
   width: calc(100% - 7%);
-  height:290px;
+  height: 290px;
 
   margin: 42px;
 
-  border-radius:10px;
+  border-radius: 10px;
 
   overflow: hidden;
 
@@ -509,10 +496,9 @@ a {
 }
 
 
-/*
-   LIGHT OVERLAY
-   Image ko visible rakha gaya hai.
-*/
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
 
 .hero-overlay {
   position: absolute;
@@ -524,7 +510,9 @@ a {
 }
 
 
-/* Decorative circles */
+/* =========================================================
+   HERO DECORATIVE CIRCLES
+========================================================= */
 
 .hero::before {
   content: "";
@@ -563,7 +551,9 @@ a {
 }
 
 
-/* HERO CONTENT */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hero-content {
   position: relative;
@@ -622,13 +612,18 @@ a {
 
   display: grid;
 
-  grid-template-columns: minmax(0, 2.4fr) minmax(220px, 0.75fr) minmax(220px, 0.75fr);
+  grid-template-columns:
+    minmax(0, 2.4fr)
+    minmax(220px, 0.75fr)
+    minmax(220px, 0.75fr);
 
   gap: 14px;
 }
 
 
-/* SEARCH */
+/* =========================================================
+   FILTER SEARCH
+========================================================= */
 
 .filter-search {
   height: 50px;
@@ -671,10 +666,12 @@ a {
 }
 
 
-/* SELECT */
+/* =========================================================
+   FILTER SELECT
+========================================================= */
 
 .filters select {
-  height:50px;
+  height: 50px;
 
   padding: 0 20px;
 
@@ -737,6 +734,7 @@ a {
 
 /* =========================================================
    PRODUCT GRID
+   COMPACT 4-COLUMN LAYOUT
 ========================================================= */
 
 .product-grid {
@@ -748,20 +746,23 @@ a {
 
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
-  gap: 22px;
+  gap: 20px;
 
-  padding-bottom: 55px;
+  padding-bottom: 40px;
 }
 
 
 /* =========================================================
    PRODUCT CARD
+   COMPACT
 ========================================================= */
 
 .product-card {
   position: relative;
 
   min-width: 0;
+
+  height: 375px;
 
   background: #ffffff;
 
@@ -772,6 +773,9 @@ a {
   overflow: hidden;
 
   box-shadow: 0 6px 18px rgba(0, 70, 45, 0.05);
+
+  display: flex;
+  flex-direction: column;
 
   transition:
     transform 0.22s ease,
@@ -788,13 +792,13 @@ a {
 
 /* =========================================================
    PRODUCT IMAGE
-   REDUCED HEIGHT
 ========================================================= */
 
 .product-image {
   position: relative;
 
-  height: 165px;
+  height: 145px;
+  min-height: 145px;
 
   background: #f3f9f6;
 
@@ -820,7 +824,7 @@ a {
 
   object-fit: contain;
 
-  padding: 12px;
+  padding: 10px;
 
   display: block;
 
@@ -839,18 +843,18 @@ a {
 .discount-badge {
   position: absolute;
 
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
 
   background: #132238;
 
   color: #ffffff;
 
-  padding: 7px 10px;
+  padding: 6px 9px;
 
   border-radius: 6px;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -865,11 +869,11 @@ a {
 .wishlist-button {
   position: absolute;
 
-  top: 12px;
-  right: 12px;
+  top: 10px;
+  right: 10px;
 
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 
   border: 1px solid #d8e2df;
 
@@ -879,7 +883,7 @@ a {
 
   color: #10233d;
 
-  font-size: 17px;
+  font-size: 16px;
 
   display: flex;
   align-items: center;
@@ -905,28 +909,34 @@ a {
 
 /* =========================================================
    PRODUCT INFORMATION
-   COMPACT
 ========================================================= */
 
 .product-info {
-  padding: 17px 20px 18px;
+  padding: 13px 18px 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
 }
 
 
-/* CATEGORY */
+/* =========================================================
+   CATEGORY
+========================================================= */
 
 .product-category {
-  margin: 0 0 7px;
+  margin: 0 0 4px;
 
   color: #05a968;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 800;
 
   text-transform: uppercase;
 
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 
 
@@ -945,17 +955,17 @@ a {
 
   color: #10233d;
 
-  font-size: 20px;
+  font-size: 18px;
 
-  line-height: 1.25;
+  line-height: 1.2;
 
   font-weight: 750;
 
-  min-height: 50px;
+  min-height: 22px;
 
   display: -webkit-box;
 
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
 
   -webkit-box-orient: vertical;
 
@@ -968,17 +978,17 @@ a {
 ========================================================= */
 
 .product-rating {
-  margin-top: 8px;
+  margin-top: 6px;
 
   color: #e9a400;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 600;
 }
 
 .product-rating span {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 
@@ -991,17 +1001,17 @@ a {
 
   align-items: center;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 7px;
+  margin-top: 5px;
 
-  min-height: 32px;
+  min-height: 28px;
 }
 
 .product-price strong {
   color: #10233d;
 
-  font-size: 24px;
+  font-size: 22px;
 
   font-weight: 800;
 }
@@ -1009,7 +1019,7 @@ a {
 .product-price span {
   color: #10233d;
 
-  font-size: 14px;
+  font-size: 13px;
 
   text-decoration: line-through;
 
@@ -1022,9 +1032,11 @@ a {
 ========================================================= */
 
 .stock {
-  margin-top: 6px;
+  margin-top: 4px;
 
-  font-size: 13px;
+  margin-bottom: 0;
+
+  font-size: 12px;
 
   font-weight: 600;
 }
@@ -1045,9 +1057,9 @@ a {
 .add-cart-btn {
   width: 100%;
 
-  height: 44px;
+  height: 40px;
 
-  margin-top: 10px;
+  margin-top: auto;
 
   border: none;
 
@@ -1057,7 +1069,7 @@ a {
 
   color: #ffffff;
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -1165,7 +1177,9 @@ a {
 }
 
 
-/* FOOTER MAIN */
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
 
 .footer-main {
   width: 93%;
@@ -1182,7 +1196,9 @@ a {
 }
 
 
-/* BRAND */
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
 
 .footer-brand h2 {
   margin-bottom: 14px;
@@ -1207,7 +1223,9 @@ a {
 }
 
 
-/* BADGES */
+/* =========================================================
+   FOOTER BADGES
+========================================================= */
 
 .footer-badges {
   display: flex;
@@ -1226,7 +1244,9 @@ a {
 }
 
 
-/* FOOTER COLUMNS */
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
 
 .footer-column {
   display: flex;
@@ -1294,7 +1314,9 @@ a {
 }
 
 
-/* NEWSLETTER BOX */
+/* =========================================================
+   NEWSLETTER BOX
+========================================================= */
 
 .newsletter-box {
   display: flex;
@@ -1373,7 +1395,6 @@ a {
 ========================================================= */
 
 @media (max-width: 1200px) {
-
   .nav-links {
     gap: 24px;
 
@@ -1386,6 +1407,8 @@ a {
 
   .product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
   }
 
   .footer-main {
@@ -1401,7 +1424,6 @@ a {
 ========================================================= */
 
 @media (max-width: 1000px) {
-
   .navbar {
     padding: 0 25px;
   }
@@ -1440,6 +1462,17 @@ a {
     width: calc(100% - 40px);
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+  .product-card {
+    height: 365px;
+  }
+
+  .product-image {
+    height: 140px;
+    min-height: 140px;
   }
 
   .footer-main {
@@ -1467,7 +1500,6 @@ a {
 ========================================================= */
 
 @media (max-width: 700px) {
-
   .navbar {
     height: 75px;
 
@@ -1550,24 +1582,73 @@ a {
     font-size: 16px;
   }
 
+  /*
+     KEEP 2 PRODUCTS PER ROW
+  */
+
   .product-grid {
     width: calc(100% - 24px);
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 16px;
+    gap: 14px;
+  }
+
+  .product-card {
+    height: 350px;
+
+    border-radius: 15px;
   }
 
   .product-image {
-    height: 190px;
+    height: 135px;
+    min-height: 135px;
   }
 
   .product-info {
-    padding: 17px 18px;
+    padding: 12px 14px;
+  }
+
+  .product-category {
+    font-size: 11px;
+
+    margin-bottom: 4px;
   }
 
   .product-title {
-    font-size: 20px;
+    font-size: 16px;
+
+    min-height: 20px;
+  }
+
+  .product-rating {
+    margin-top: 5px;
+
+    font-size: 12px;
+  }
+
+  .product-price {
+    margin-top: 4px;
+  }
+
+  .product-price strong {
+    font-size: 19px;
+  }
+
+  .product-price span {
+    font-size: 11px;
+  }
+
+  .stock {
+    font-size: 11px;
+
+    margin-top: 3px;
+  }
+
+  .add-cart-btn {
+    height: 38px;
+
+    font-size: 13px;
   }
 
   .footer-main {
@@ -1617,7 +1698,6 @@ a {
 ========================================================= */
 
 @media (max-width: 450px) {
-
   .logo > span {
     font-size: 21px;
   }
@@ -1647,12 +1727,91 @@ a {
     font-size: 15px;
   }
 
+  /*
+     KEEP 2 CARDS PER ROW
+     EVEN ON SMALL MOBILE
+  */
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .product-card {
+    height: 330px;
+
+    border-radius: 13px;
+  }
+
   .product-image {
-    height: 175px;
+    height: 115px;
+    min-height: 115px;
+  }
+
+  .product-info {
+    padding: 10px 11px;
+  }
+
+  .product-category {
+    font-size: 9px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .product-title {
+    font-size: 14px;
+
+    min-height: 17px;
+  }
+
+  .product-rating {
+    font-size: 11px;
+
+    margin-top: 4px;
+  }
+
+  .product-price {
+    gap: 5px;
   }
 
   .product-price strong {
-    font-size: 22px;
+    font-size: 17px;
+  }
+
+  .product-price span {
+    font-size: 10px;
+  }
+
+  .stock {
+    font-size: 10px;
+  }
+
+  .add-cart-btn {
+    height: 34px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+  }
+
+  .discount-badge {
+    top: 7px;
+    left: 7px;
+
+    padding: 5px 7px;
+
+    font-size: 10px;
+  }
+
+  .wishlist-button {
+    top: 7px;
+    right: 7px;
+
+    width: 27px;
+    height: 27px;
+
+    font-size: 14px;
   }
 
   .footer-main {
